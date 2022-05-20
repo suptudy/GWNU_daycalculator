@@ -31,6 +31,14 @@ public class DayCalculator {
 
     public String getDayofWeek() {
         String[] dayOfWeek = { "Sun", "Mon", "Tue", "Wed", "Thr", "Fri", "Sat" };
-        return dayOfWeek[this.day % 7];
+        int[] daysOfMonth = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+        int totalDays = 0;
+
+        for (int i = 0; i < this.month; i++) {
+            totalDays = totalDays + daysOfMonth[i];
+        }
+        totalDays = totalDays + this.day;
+
+        return dayOfWeek[totalDays % 7];
     }
 }
