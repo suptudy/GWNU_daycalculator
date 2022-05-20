@@ -41,4 +41,33 @@ public class DayCalculatorTest {
         assertEquals(5, this.dayCalculator.getMonth());
         assertEquals(14, this.dayCalculator.getDay());
     }
+
+    @Test
+    public void test_getDayofWeek_00010101() {
+        this.dayCalculator.setDate(1, 1, 1);
+
+        assertEquals("Mon", this.dayCalculator.getDayofWeek());
+    }
+
+    @Test
+    public void test_getDayofWeek_00010201() {
+        this.dayCalculator.setDate(1, 1, 2);
+
+        assertEquals("Tue", this.dayCalculator.getDayofWeek());
+    }
+
+    @Test
+    public void test_getDayofWeek_00010103() {
+        this.dayCalculator.setDate(1, 1, 3);
+
+        assertEquals("Wed", this.dayCalculator.getDayofWeek());
+    }
+
+    @Test
+    public void test_getDayofWeek_00010110() {
+        this.dayCalculator.setDate(1, 1, 10);
+
+        assertEquals("Wed", this.dayCalculator.getDayofWeek());
+    }
+
 }

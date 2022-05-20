@@ -28,4 +28,9 @@ public class DayCalculator {
     public int getDay() {
         return this.day;
     }
+
+    public String getDayofWeek() {
+        String[] dayOfWeek = { "Sun", "Mon", "Tue", "Wed", "Thr", "Fri", "Sat" };
+        return dayOfWeek[this.day % 7];
+    }
 }
