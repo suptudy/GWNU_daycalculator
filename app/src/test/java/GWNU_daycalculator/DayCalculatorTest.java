@@ -90,4 +90,32 @@ public class DayCalculatorTest {
 
         assertEquals("Mon", this.dayCalculator.getDayofWeek());
     }
+
+    @Test
+    public void test_getDayofWeek_00020101() {
+        this.dayCalculator.setDate(2, 1, 1);
+
+        assertEquals("Tue", this.dayCalculator.getDayofWeek());
+    }
+
+    @Test
+    public void test_getDayofWeek_20220520() {
+        this.dayCalculator.setDate(2022, 5, 20);
+
+        assertEquals("Fri", this.dayCalculator.getDayofWeek());
+    }
+
+    @Test
+    public void test_getDayofWeek_20200229() {
+        this.dayCalculator.setDate(2020, 2, 29);
+
+        assertEquals("Sat", this.dayCalculator.getDayofWeek());
+    }
+
+    @Test
+    public void test_getDayofWeek_20200301() {
+        this.dayCalculator.setDate(2020, 3, 1);
+
+        assertEquals("Sun", this.dayCalculator.getDayofWeek());
+    }
 }
