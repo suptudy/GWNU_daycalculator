@@ -13,10 +13,9 @@ public class AppTest {
         assertNotNull("app should have a greeting", classUnderTest.getGreeting());
     }
 
-}
-
-public static void main(String[] args) {
-    DayCalculator dayCalculator = new DayCalculator();
-    dayCalculator.setDate(2022, 6, 3);
-    System.out.println(dayCalculator.getDayofWeek());
+    public static void main(String[] args) {
+        DayCalculator dayCalculator = new DayCalculator();
+        dayCalculator.setDate(2022, 6, 3);
+        System.out.println(dayCalculator.getDayofWeek());
+    }
 }
